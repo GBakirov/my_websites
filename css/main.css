@@ -1,0 +1,79 @@
+*
+{
+ margin: 0;
+ padding: 0;
+}
+body{
+  
+ 
+  background-color: rgb(194, 195, 196);
+  box-sizing: border-box;
+}
+.container{ 
+  max-width: 1200px;
+  margin: 15px auto;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  padding: 10px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0,0.2);
+  transition: box-shadow 0.5s ease;
+}
+.card:hover{
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0,0.1) ;
+}
+.card-md{
+  position: relative;
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+}
+.card-md:hover{
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0,0.2);
+}
+.card-md a img{
+  width: 100%;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+}
+.card-md:hover img{
+  opacity: 0.7;
+}
+.card-md h2{
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  opacity: 0.5;
+  transform: translateY(200%);
+  color: #010742;
+  transition: transform 0.5s ease;
+}
+.card-md:hover  h2{
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 655px){
+  .container{
+    height: 0;
+    align-items: flex-start;
+  }
+  .card{
+    flex-wrap: wrap;
+  }
+  .card-md img{
+    width: 50%;
+  }
+  .card-md h2{
+    left: 35%;
+  }
+}
